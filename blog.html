@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Paul Ingram III | Blog</title>
+    <meta name="description" content="Blog posts by Your Name" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body id="top">
+    <header class="wrap">
+      <h1>News & Blog</h1>
+
+      <ul class="nav">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="index.html#projects">Projects</a></li>
+        <li>
+          <a href="index.html#coursework" data-section="coursework"
+            >Coursework</a
+          >
+        </li>
+        <li><a href="resume.pdf">Resume</a></li>
+        <li><a href="blog.html" aria-current="page">News & Blog</a></li>
+      </ul>
+    </header>
+
+    <main class="wrap">
+      <section>
+        <details open>
+          <summary class="news-summary">News</summary>
+          <!-- news articles here -->
+          <article class="news">
+            <div class="news-top">
+              <h4 class="news-title">Shipped my portfolio site</h4>
+              <p class="news-date">Dec 22, 2025</p>
+            </div>
+            <p class="news-text">
+              Moved to a clean academic style and added project cards + blog.
+            </p>
+          </article>
+        </details>
+      </section>
+      <section>
+        <h3>Blog</h3>
+        <p>Short notes about projects, classes, and what I am learning.</p>
+      </section>
+
+      <!-- blog posts here -->
+      <!-- <section>
+        <article class="post">
+          <h4>
+            <a href="posts/2025-12-19-first-post.html">First post title</a>
+          </h4>
+          <p class="meta">December 19, 2025</p>
+          <p>Two sentence preview of the post.</p>
+        </article>
+      </section> -->
+
+      <footer class="footer">
+        <p>© <span id="y"></span> Paul Ingram III</p>
+      </footer>
+
+      <p><a href="#top">Back to top</a></p>
+    </main>
+
+    <script>
+      document.getElementById("y").textContent = new Date().getFullYear();
+    </script>
+  </body>
+</html>

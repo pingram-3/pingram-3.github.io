@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Paul Ingram III's Portfolio</title>
+    <meta name="My website" content="Paul Ingram III's Portfolio" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <header class="wrap">
+      <div class="header-grid">
+        <div>
+          <h1>Paul V. Ingram III</h1>
+
+          <p class="tagline">
+            Undergraduate CS Student @ UCR
+          </p>
+
+          <p class="quicklinks">
+            <span class="email">pv&ltlastname&gt3 AT gmail DOT com</span>
+            <a href="https://github.com/pingram-3">GitHub</a> ·
+            <a href="https://www.linkedin.com/in/pingram3/">LinkedIn</a>
+          </p>
+        </div>
+
+        <!-- <img
+          class="portrait"
+          src="portrait.jpg"
+          alt="Portrait of Paul Ingram III"
+          width="140"
+          height="140"
+          loading="lazy"
+        /> -->
+      </div>
+
+      <ul class="nav">
+        <li><a href="index.html" data-section="about">Home</a></li>
+        <li><a href="#projects" data-section="projects">Projects</a></li>
+        <li><a href="#coursework" data-section="coursework">Coursework</a></li>
+        <li><a href="resume.pdf">Resume</a></li>
+        <li><a href="blog.html">News & Blog</a></li>
+      </ul>
+    </header>
+
+    <main class="wrap">
+      <section id="about">
+        <h3>Overview</h3>
+
+        <p>
+          I build and analyze systems to understand how they behave, fail, and
+          can be secured. My work spans systems security, applied algorithms,
+          and data-driven analysis, with a focus on using rigorous models to
+          reason about real-world complexity.
+        </p>
+
+        <h4 class="subhead">Quick facts</h4>
+        <ul>
+          <li>CS B.S. @ UCR (Expected Spring 2026)</li>
+          <li>Interests: systems security, data-driven ML</li>
+          <li>Tools: C/C++, Python, Linux</li>
+        </ul>
+      </section>
+
+      <!-- announcements here -->
+      <!-- <div class="callout">
+        <strong>Latest:</strong>
+        <a href="posts/2025-12-19-first-post.html">First post title</a>
+        <span class="muted"> · December 19, 2025</span>
+      </div> -->
+      <!-- end announcements -->
+
+      <section id="projects">
+        <h3>Projects</h3>
+
+        <h4 class="group">Featured</h4>
+        <!-- personal projects here -->
+        <article class="item">
+          <h4>
+            <a href="https://github.com/pingram-3/mancala-ai">Mancala AI</a>
+          </h4>
+          <p>
+            A terminal-based implementation of Mancala featuring a stylized
+            ANSI-rendered board and an AI opponent powered by minimax with
+            alpha–beta pruning.
+          </p>
+          <ul>
+            <li><b>Tech</b>: Python, ANSI escape codes</li>
+            <li>
+              <b>Highlight</b>: Implemented an efficient minimax search with
+              alpha–beta pruning to support responsive AI play in a terminal
+              environment
+            </li>
+            <li>
+              <b>What I learned</b>: Game-tree search optimization and low-level
+              terminal rendering using ANSI control sequences
+            </li>
+          </ul>
+          <div class="chips">
+            <span class="chip">Game AI</span>
+            <span class="chip">Algorithms</span>
+            <span class="chip">Systems</span>
+          </div>
+        </article>
+
+        <article class="item">
+          <h4>
+            <a href="https://github.com/acm-ucr/hsa-website"
+              >Front-End Developer - HSA Website</a
+            >
+          </h4>
+          <p>
+            A collaborative club website developed in a Scrum team, focused on
+            delivering a responsive, polished user experience for a student
+            organization.
+          </p>
+          <ul>
+            <li><b>Tech</b>: Next.js, Tailwind CSS</li>
+            <li>
+              <b>Highlight</b>: Contributed animations, mobile-responsive
+              layouts, and reusable UI components within an agile Scrum team
+            </li>
+            <li>
+              <b>What I learned</b>: Frontend development with Next.js,
+              utility-first styling with Tailwind, and the fundamentals of web
+              hosting and deployment
+            </li>
+          </ul>
+          <div class="chips">
+            <span class="chip">Frontend</span>
+            <span class="chip">Web Development</span>
+            <span class="chip">Team Project</span>
+          </div>
+        </article>
+
+        <h4 class="group">Class Projects</h4>
+        <!-- class projects here -->
+        <article class="item">
+          <h4>
+            <a href="https://github.com/pingram-3/cs148-final-project"
+              >CS148 Final Project</a
+            >
+          </h4>
+          <p>
+            A robotics simulation project implementing autonomous path planning
+            and mapping in ROS, developed in a two-person team.
+          </p>
+          <ul>
+            <li><b>Tech</b>: Python, ROS, RViz</li>
+            <li>
+              <b>Highlight</b>: Implemented Dijkstra-based path planning with
+              custom Planner and Publisher nodes, interactive waypoint selection
+              in RViz, and SLAM-generated occupancy grids
+            </li>
+            <li>
+              <b>Analysis</b>: Evaluated empirical runtime and space complexity
+              of multiple path planning algorithms across varying path lengths
+              using visualization
+            </li>
+            <li>
+              <b>What I learned</b>: Integrating perception, graph search, and
+              performance analysis to reason about real-time robotic navigation
+              systems
+            </li>
+          </ul>
+          <div class="chips">
+            <span class="chip">Robotics</span>
+            <span class="chip">Systems</span>
+            <span class="chip">Algorithms</span>
+          </div>
+        </article>
+
+        <article class="item">
+          <h4>
+            <a href="https://github.com/pingram-3/CS105-miniproject"
+              >CS105 Mini Project</a
+            >
+          </h4>
+          <p>
+            An exploratory data analysis project examining relationships between
+            stress levels and lifestyle factors using survey data from Computer
+            Science students at UCR.
+          </p>
+          <ul>
+            <li><b>Tech</b>: Python, Pandas, Matplotlib</li>
+            <li>
+              <b>Highlight</b>: Identified statistically significant
+              relationships between reported stress levels and lifestyle
+              variables using hypothesis testing at standard significance
+              thresholds and visualizations
+            </li>
+            <li>
+              <b>What I learned</b>: Applying EDA, statistical testing, and
+              visualization to reason about real-world survey data
+            </li>
+          </ul>
+          <div class="chips">
+            <span class="chip">Data Science</span>
+            <span class="chip">Statistics</span>
+            <span class="chip">Analysis</span>
+          </div>
+        </article>
+      </section>
+
+      <!-- <section id="contact">
+        <h3>Contact</h3>
+        <p>
+          <a href="mailto:pvingram3@gmail.com">pvingram3@gmail.com</a><br />
+          <a href="https://github.com/pingram-3">GitHub</a><br />
+          <a href="https://www.linkedin.com/in/pingram3/">LinkedIn</a>
+        </p>
+      </section> -->
+      <section id="coursework">
+        <h3>Coursework</h3>
+
+        <p class="muted">Selected courses I’ve completed at UCR.</p>
+
+        <div class="course-grid">
+          <div class="course-col">
+            <h4 class="subhead">Systems & Security</h4>
+            <ul class="course-list">
+              <li>CS165: Computer Security</li>
+              <li>CS161: Computer Architecture</li>
+              <li>CS153: Operating Systems</li>
+            </ul>
+          </div>
+
+          <div class="course-col">
+            <h4 class="subhead">AI & Data</h4>
+            <ul class="course-list">
+              <li>CS171: Machine Learning and Data Mining</li>
+              <li>CS170: Artificial Intelligence</li>
+              <li>CS148: AI for Robotics</li>
+              <li>CS105: Data Analysis Methods</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <footer class="footer">
+        <p>© <span id="y"></span> Paul Ingram III</p>
+      </footer>
+
+      <p><a href="#top">Back to top</a></p>
+    </main>
+
+    <script>
+      document.getElementById("y").textContent = new Date().getFullYear();
+    </script>
+    <script>
+      const sectionIds = ["about", "projects", "coursework", "contact"];
+      const sections = sectionIds
+        .map((id) => document.getElementById(id))
+        .filter(Boolean);
+
+      const navLinks = Array.from(document.querySelectorAll("a[data-section]"));
+
+      function setCurrent(id) {
+        navLinks.forEach((a) => {
+          if (a.dataset.section === id) a.setAttribute("aria-current", "page");
+          else a.removeAttribute("aria-current");
+        });
+      }
+
+      function currentSectionByTopLine() {
+        // If there's a hash, prefer it when it matches a section.
+        const hash = location.hash.replace("#", "");
+        if (sectionIds.includes(hash)) return hash;
+
+        // Pick the section whose top is closest to a line 120px from the top.
+        const line = 120;
+        let bestId = "about";
+        let bestDist = Infinity;
+
+        for (const s of sections) {
+          const dist = Math.abs(s.getBoundingClientRect().top - line);
+          if (dist < bestDist) {
+            bestDist = dist;
+            bestId = s.id;
+          }
+        }
+        return bestId;
+      }
+
+      function update() {
+        setCurrent(currentSectionByTopLine());
+      }
+
+      window.addEventListener("scroll", update, { passive: true });
+      window.addEventListener("hashchange", update);
+
+      // Also update after clicking nav links (covers instant jumps)
+      navLinks.forEach((a) =>
+        a.addEventListener("click", () => setTimeout(update, 0))
+      );
+
+      // Initial set
+      update();
+    </script>
+  </body>
+</html>
