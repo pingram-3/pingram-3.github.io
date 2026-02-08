@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <!-- <title> INSERT POST TITLE | Paul Ingram III</title> -->
+    <link rel="stylesheet" href="../style.css" />
+  </head>
+
+  <body>
+    <header class="wrap">
+      <!-- <h1>POST TITLE HEREe</h1> -->
+      <ul class="nav">
+        <li><a href="../index.html#about">Home</a></li>
+        <li><a href="../index.html#projects">Projects</a></li>
+        <li><a href="../index.html#contact">Contact</a></li>
+        <li><a href="../resume.pdf">Resume</a></li>
+        <li><a href="../blog.html">Blog</a></li>
+      </ul>
+    </header>
+
+    <main class="wrap">
+      <p class="meta">February 7, 2026</p>
+      <!-- POST CONTENT HERE -->
+      <article>
+        <h1>My First Cybersecurity Hackathon</h1>
+
+        <p>
+          Last quarter, I took what has been my favorite course in my
+          undergraduate degree, Computer Security. The course taught me concepts
+          that have stuck with me, like vulnerability analysis, system security
+          concepts, and the mindset required to think like an attacker. About
+          halfway through this quarter, the professor invited me to participate
+          in a week-long DARPA-hosted hackathon with his research group. The
+          goal was to analyze Android APK files and exploit known
+          vulnerabilities on Android version 13.0 (“Tiramisu”).
+        </p>
+
+        <p>
+          On the first day of the hackathon, I was overwhelmed with the task of
+          exploiting fully developed applications. Unlike the project
+          assignments in the Computer Security course (that were designed to be
+          exploited), there were no instructional guides. The codebases were
+          unfamiliar, the attack surface was unclear, and I had to learn the
+          process of how real vulnerability research actually begins.
+        </p>
+
+        <p>
+          After getting familiar with using the jadx decompiler, learning how to
+          use LLMs as research assistants, and researching Common
+          Vulnerabilities and Exposures (CVEs), I successfully reproduced a path
+          traversal exploit in an Adobe Reader APK. Reproducing the exploit
+          required understanding how file paths were handled by the application,
+          how Android app storage works, and how insufficient input sanitization
+          could allow access to unintended directories. The results from this
+          reproduction were included in the group’s final write-up.
+        </p>
+
+        <p>
+          This hackathon was the first time I applied concepts from a security
+          course to real software systems. It showed me how much breadth is
+          required to move from understanding vulnerabilities conceptually to
+          reproducing them in practice.
+        </p>
+
+        <p>
+          This experience has allowed me to gain a perspective on security
+          research. Reading exploit write-ups is very different from reproducing
+          them, and reproducing them is very different from discovering new
+          ones. My goal moving forward is to continue building the systems
+          knowledge necessary to eventually develop my own unique exploits.
+        </p>
+
+        <p>
+          My next step in my cybersecurity journey is to continue working with
+          this professor and his research group in learning tool development to
+          support future hackathons. Additionally, I plan to continue deepening
+          my understanding of vulnerability analysis in real world applications.
+        </p>
+      </article>
+
+      <footer class="footer">
+        <p>© <span id="y"></span> Paul Ingram III</p>
+      </footer>
+    </main>
+
+    <script>
+      document.getElementById("y").textContent = new Date().getFullYear();
+    </script>
+  </body>
+</html>
