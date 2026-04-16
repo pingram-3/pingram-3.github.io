@@ -43,11 +43,12 @@ p {
 
 .nav{
   list-style: none;
-  padding: 0;
-  margin: 10px 0 0 0;
+  padding: 10px 0 0 0;
+  margin: 12px 0 0 0;
   display: flex;
   flex-wrap: wrap;
   gap: 0;
+  border-top: 1px solid var(--rule);
 }
 
 .nav li{
@@ -274,23 +275,69 @@ a:hover{ text-decoration: underline; text-decoration-thickness: 2px; text-underl
   align-items: center;
 }
 
+.portrait-frame{
+  width: 140px;
+  height: 140px;
+  border-radius: 16px;
+  border: 1px solid var(--rule);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.10);
+  overflow: hidden;
+  flex-shrink: 0;
+}
 .portrait{
   width: 140px;
   height: 140px;
   object-fit: cover;
-  border-radius: 16px;         /* rounded-square fits your card style */
-  border: 1px solid var(--rule);
-  box-shadow: 0 10px 30px rgba(0,0,0,0.10);
+  object-position: 60% 35%;
+  transform: scale(1.45);
+  transform-origin: center 58%;
+  display: block;
 }
 
-/* mobile: portrait goes above text */
 @media (max-width: 640px){
   .header-grid{
-    grid-template-columns: 1fr;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 14px;
+  }
+  .portrait-frame{
+    order: -1;
+    flex-shrink: 0;
+    width: 80px;
+    height: 80px;
+    border-radius: 12px;
   }
   .portrait{
-    width: 120px;
-    height: 120px;
+    width: 80px;
+    height: 80px;
+    border-radius: 12px;
+  }
+  .header-grid h1{
+    font-size: 1.2rem;
+    margin: 0 0 2px 0;
+  }
+  .header-grid .tagline{
+    font-size: 0.85rem;
+    margin: 0 0 4px 0;
+  }
+  .header-grid .quicklinks{
+    font-size: 0.8rem;
+    margin: 0;
+  }
+  .nav{
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 0;
+    border-top: 1px solid var(--rule);
+    margin-top: 10px;
+    padding-top: 8px;
+    font-size: 0.85rem;
+  }
+  .nav li + li::before{
+    content: " | ";
+    color: var(--muted);
+    padding: 0 5px;
   }
 }
 
@@ -353,23 +400,16 @@ details[open] > .news-summary::before{
   transform: rotate(90deg) translateY(-1px);
 }
 
+section{
+  margin-top: 28px;
+}
+
+section:first-child{
+  margin-top: 0;
+}
+
 section > h3:first-child{
-  margin-top: 6px;
-}
-
-/* less top space for the News summary when it's the first thing */
-section > details:first-child > .news-summary{
-  margin-top: 6px;
-}
-
-/* keep Overview tight */
-#about > h3:first-child{
-  margin-top: 6px;
-}
-
-/* give Projects a normal / larger top margin */
-#projects > h3:first-child{
-  margin-top: 18px;   /* try 14px or 18px */
+  margin-top: 0;
 }
 
 .subhead{
