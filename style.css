@@ -289,8 +289,8 @@ a:hover{ text-decoration: underline; text-decoration-thickness: 2px; text-underl
   height: 140px;
   object-fit: cover;
   object-position: 60% 35%;
-  transform: scale(1.45);
-  transform-origin: center 58%;
+  transform: scale(3.3);
+  transform-origin: 54% 63%;
   display: block;
 }
 
