@@ -1,86 +1,138 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <title>Paul Ingram III | Blog</title>
-    <meta name="description" content="Blog posts by Your Name" />
-    <link rel="stylesheet" href="style.css" />
-  </head>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Paul Ingram III | News &amp; Blog</title>
+  <meta name="description" content="News and blog posts by Paul Ingram III." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Spectral:wght@400;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --accent: #003DA5; --gold: #FFB81C; --rule: #cfddf4; --muted: #3d5278;
+      --heading-font: 'Spectral', Georgia, 'Times New Roman', serif;
+      --meta-font: 'JetBrains Mono', ui-monospace, 'SF Mono', monospace;
+      color-scheme: light;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0; color: #111; line-height: 1.62;
+      font-family: system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      background:
+        linear-gradient(rgba(0,61,165,0.06) 1px, transparent 1px) 0 0 / 30px 30px,
+        linear-gradient(90deg, rgba(0,61,165,0.06) 1px, transparent 1px) 0 0 / 30px 30px,
+        #e8f0fb;
+      background-attachment: fixed;
+    }
+    @keyframes fadeUp { from { opacity:0; transform:translateY(16px);} to { opacity:1; transform:translateY(0);} }
+    @keyframes cardUp { from { opacity:0; transform:translateY(20px);} to { opacity:1; transform:translateY(0);} }
+    @media (prefers-reduced-motion: reduce) { * { animation:none !important; } html { scroll-behavior:auto; } }
 
-  <body id="top">
-    <header class="wrap">
-      <h1>News & Blog</h1>
+    .card {
+      max-width: 830px; margin: 0 auto; background: #fff;
+      border: 1px solid var(--rule); border-radius: 16px;
+      box-shadow: 0 12px 34px rgba(0,61,165,0.08);
+      animation: fadeUp .7s cubic-bezier(.2,.7,.2,1) both;
+    }
+    header.card { margin: 40px auto 24px; padding: 28px 26px; }
+    main.card { margin: 0 auto 40px; padding: 30px 26px; animation-delay: .1s; }
 
-      <ul class="nav">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="index.html#projects">Projects</a></li>
-        <li>
-          <a href="index.html#coursework" data-section="coursework"
-            >Coursework</a
-          >
-        </li>
-        <li><a href="resume.pdf">Resume</a></li>
-        <li><a href="blog.html" aria-current="page">News & Blog</a></li>
-      </ul>
-    </header>
+    h1 { font-size: 32px; margin: 0; font-weight: 700; color: var(--accent); font-family: var(--heading-font); letter-spacing: -0.01em; }
+    .nav {
+      list-style: none; padding: 12px 0 0 0; margin: 18px 0 0 0;
+      display: flex; flex-wrap: wrap; align-items: center; gap: 4px 6px;
+      border-top: 1px solid var(--rule); font-family: var(--meta-font); font-size: 14.5px;
+    }
+    .nav li { margin: 0; }
+    .nav a {
+      display: inline-block; padding: 5px 12px; color: var(--accent);
+      text-decoration: none; border-radius: 7px; white-space: nowrap;
+      transition: background 160ms ease, color 160ms ease;
+    }
+    .nav a:hover { background: rgba(0,61,165,0.08); color: var(--accent); text-decoration: none; }
 
-    <main class="wrap">
-      <section>
-        <details open>
-          <summary class="news-summary">News</summary>
-          <!-- news articles here -->
-          <article class="news">
-            <div class="news-top">
-              <h4 class="news-title">Shipped my portfolio site</h4>
-              <p class="news-date">Dec 22, 2025</p>
-            </div>
-            <p class="news-text">
-              Moved to a clean academic style and added project cards + blog.
-            </p>
-          </article>
-        </details>
-      </section>
-      <section>
-        <h3>Blog</h3>
-        <p>Short notes about projects, classes, and what I am learning.</p>
-      </section>
+    section { margin-top: 34px; animation: fadeUp .6s ease both; }
+    section:first-of-type { margin-top: 0; }
+    h3 {
+      font-size: 21px; margin: 0 0 12px 0; color: var(--accent);
+      font-family: var(--heading-font); font-weight: 600; display: inline-block;
+      padding-bottom: 4px; border-bottom: 3px solid var(--gold);
+    }
+    .lead { margin: 10px 0 14px 0; color: var(--muted); }
 
-      <!-- blog posts here -->
-      <!-- <section>
-        <article class="post">
-          <h4>
-            <a href="posts/2025-12-19-first-post.html">First post title</a>
-          </h4>
-          <p class="meta">December 19, 2025</p>
-          <p>Two sentence preview of the post.</p>
-        </article>
-      </section> -->
+    .post {
+      background: rgba(255,255,255,0.85); border: 1px solid var(--rule);
+      border-left: 6px solid var(--accent); padding: 14px 16px; border-radius: 12px;
+      margin: 12px 0; animation: cardUp .6s cubic-bezier(.2,.7,.2,1) both;
+      transition: box-shadow 180ms ease, transform 180ms ease;
+    }
+    .post:hover { box-shadow: 0 14px 34px rgba(0,61,165,0.12); transform: translateY(-2px); }
+    .news-top { display: flex; align-items: baseline; justify-content: space-between; gap: 12px; }
+    .news-title { margin: 0; font-size: 16px; font-family: var(--heading-font); font-weight: 600; color: #1a1a1a; }
+    .news-date { margin: 0; font-size: 13px; color: var(--muted); white-space: nowrap; font-family: var(--meta-font); }
+    .news-text { margin: 8px 0 0 0; color: #1a1a1a; }
+    .post h4 { margin: 0 0 4px 0; font-size: 17px; font-family: var(--heading-font); font-weight: 600; }
+    .post h4 a { color: var(--accent); text-decoration: none; }
+    .post h4 a:hover { text-decoration: underline; }
+    .post .meta { margin: 0 0 8px 0; color: var(--muted); font-size: 13px; font-family: var(--meta-font); }
+    .post p:last-child { margin: 0; color: #1a1a1a; }
 
-      <section>
-        <article class="post">
-          <h4>
-            <a href="posts/2026-02-07.html">My First Cybersecurity Hackathon</a>
-          </h4>
-          <p class="meta">February 7, 2026</p>
-          <p>
-            This post documents my first cybersecurity hackathon experience
-            working with Android APK reverse engineering and vulnerability
-            reproduction. I describe using jadx, CVE research, and
-            proof-of-concept development to reproduce a path traversal exploit.
-          </p>
-        </article>
-      </section>
+    footer {
+      margin-top: 34px; padding-top: 14px; border-top: 1px solid var(--rule);
+      color: var(--muted); font-family: var(--meta-font); font-size: 13px;
+    }
+    footer p { margin: 6px 0; }
 
-      <footer class="footer">
-        <p>© <span id="y"></span> Paul Ingram III</p>
-      </footer>
+    @media (max-width: 640px) {
+      .nav { font-size: 13.5px; gap: 4px; justify-content: center; }
+      .nav a { padding: 7px 12px; }    /* taller tap targets, centered */
+    }
+  </style>
+</head>
 
-      <p><a href="#top">Back to top</a></p>
-    </main>
+<body id="top">
+  <header class="card">
+    <h1>News &amp; Blog</h1>
+    <ul class="nav">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="index.html#projects">Projects</a></li>
+      <li><a href="index.html#coursework">Coursework</a></li>
+      <li><a href="resume.pdf">Resume</a></li>
+      <li><a href="blog.html">News &amp; Blog</a></li>
+    </ul>
+  </header>
 
-    <script>
-      document.getElementById("y").textContent = new Date().getFullYear();
-    </script>
-  </body>
+  <main class="card">
+    <section>
+      <h3>News</h3>
+      <article class="post">
+        <div class="news-top">
+          <h4 class="news-title">Shipped my portfolio site</h4>
+          <p class="news-date">Dec 22, 2025</p>
+        </div>
+        <p class="news-text">Moved to a clean academic style and added project cards + blog.</p>
+      </article>
+    </section>
+
+    <section>
+      <h3>Blog</h3>
+      <p class="lead">Short notes about projects, classes, and what I am learning.</p>
+      <article class="post">
+        <h4><a href="posts/2026-02-07.html">My First Cybersecurity Hackathon</a></h4>
+        <p class="meta">February 7, 2026</p>
+        <p>This post documents my first cybersecurity hackathon experience working with Android APK reverse engineering and vulnerability reproduction. I describe using jadx, CVE research, and proof-of-concept development to reproduce a path traversal exploit.</p>
+      </article>
+    </section>
+
+    <footer>
+      <p>© <span id="y"></span> Paul Ingram III</p>
+    </footer>
+  </main>
+
+  <script>
+    document.getElementById("y").textContent = new Date().getFullYear();
+  </script>
+</body>
 </html>
